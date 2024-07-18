@@ -1,4 +1,4 @@
-# Analyzing Offensive Content and Emotional Dynamics \\in Black Lives Matter Discourse on Twitter
+# Analyzing Offensive Content and Emotional Dynamics in Black Lives Matter Discourse on Twitter
 Ebuka Okpala, Long Cheng, and Kehinde Elelu
 
 Accepted to the International Conference on Web and Social Media (ICWSM'2025), June 23 - 26, 2025, Copenaghen, Denmark
