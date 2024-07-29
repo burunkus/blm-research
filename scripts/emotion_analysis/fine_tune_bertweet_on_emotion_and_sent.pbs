@@ -1,0 +1,15 @@
+#PBS -N ft_bt_emo
+#PBS -o /home/eokpala/blm-research/scripts/emotion_analysis/logs/ft_bertweet_on_emo_and_sent_out.txt
+#PBS -e /home/eokpala/blm-research/scripts/emotion_analysis/logs/ft_bertweet_on_emo_and_sent_err.txt
+#PBS -l select=1:ncpus=16:ngpus=1:gpu_model=v100:mem=10gb:interconnect=hdr,walltime=72:00:00
+#PBS -m abe
+#PBS -M eokpala@clemson.edu
+
+module add cuda/11.6.2-gcc/9.5.0 
+module add cudnn/8.1.0.77-11.2-gcc/9.5.0 
+module add anaconda3/2022.05-gcc/9.5.0
+
+source activate pt_cuda_env
+
+cd /home/eokpala/blm-research/scripts/emotion_analysis/
+python fine_tune_bertweet_on_emotion_and_sent.py
