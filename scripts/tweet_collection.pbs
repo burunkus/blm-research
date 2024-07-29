@@ -1,0 +1,15 @@
+#PBS -N collect
+#PBS -o /home/eokpala/blm-research/logs/tweet_collection_out.txt
+#PBS -e /home/eokpala/blm-research/logs/tweet_collection_err.txt
+#PBS -l select=1:ncpus=16:ngpus=1:gpu_model=p100:mem=10gb:interconnect=fdr,walltime=72:00:00
+#PBS -m abe
+#PBS -M eokpala@clemson.edu
+
+module add cuda/11.6.2-gcc/9.5.0 
+module add cudnn/8.1.0.77-11.2-gcc/9.5.0 
+module add anaconda3/2022.05-gcc/9.5.0
+
+source activate tf_gpu_env
+
+cd /home/eokpala/blm-research/scripts/
+python tweet_collection.py
